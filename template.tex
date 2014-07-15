@@ -1,0 +1,29 @@
+\documentclass[a4paper]{article}
+% needs to be compiled with xelatex
+\usepackage{eso-pic,graphicx}
+\usepackage{lipsum}
+\usepackage{background}
+\usepackage{fontspec}
+%\usepackage[top=2cm, bottom=2cm, outer=0cm, inner=0cm]{geometry}
+\usepackage[pass,a4paper]{geometry}
+
+\setmainfont{Didact Gothic}
+\linespread{1.4} % 1.6 is double
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,  %% adjust
+contents={\includegraphics[width=\paperwidth,height=\paperheight]{background}}
+}
+\setlength{\parskip}{13pt}
+\setlength\parindent{0pt}
+
+\newcommand{\block}[2][-0.4]{\raisebox{#1\height}{\includegraphics{#2}}}
+
+\begin{document}
+\begin{large}
+
+Vi bruker \block{move} for å flytte på 2. Også bruker vi en \block[-0.32]{flag}.
+
+\end{large}
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[a4paper]{article}
+% needs to be compiled with xelatex
+\usepackage{eso-pic,graphicx}
+\usepackage{lipsum}
+\usepackage{background}
+\usepackage{fontspec}
+%\usepackage[top=2cm, bottom=2cm, outer=0cm, inner=0cm]{geometry}
+\usepackage[pass,a4paper]{geometry}
+
+\setmainfont{Didact Gothic}
+\linespread{1.4} % 1.6 is double
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,  %% adjust
+contents={\includegraphics[width=\paperwidth,height=\paperheight]{background}}
+}
+\setlength{\parskip}{13pt}
+\setlength\parindent{0pt}
+
+\newcommand{\block}[2][-0.4]{\raisebox{#1\height}{\includegraphics{#2}}}
+
+\begin{document}
+\begin{large}
+
+Det er litt kjedelig med bare en katt. Katten er en figur, også kalt «sprite» 
+i Scratch. For å legge til nye figurer, klikk på \block{new_sprite}. Finn frem til 
+figurene dere har valgt å bruke, og legg dem til i Scratch. Høyreklikk på katten
+og trykk «delete» for å fjerne den.
+
+
+Hver figur har sitt eget kodeområde. For å bytte mellom dem, dobbeltklikk på 
+figuren din i området med oversikten over alle figurene. Når en figur er valgt, 
+er det mulig å gi den et navn øverst til venstre. Gjør dette med alle figurene
+dere har, slik at det er lettere å holde oversikt.
+
+Nå som vi har flere figurer, er det mulig å få dem til å reagere på hverandre. 
+I Scratch fungerer dette ved å la figurene sende meldinger til hverandre.
+Dra ut \block{broadcast} (under «control»). Trykk på pilen for å lage en ny 
+melding og gi den et fint navn.
+
+Dobbeltklikk på en annen figur for å komme inn i kodeområdet til den. For å reagere
+på meldingen, dra over \block{receive} . Husk å bytte til riktig melding hvis du har laget flere.
+
+Oppgave
+\begin{itemize}
+    \item En figur sier noe og sender en melding til en annen figur. Den andre figuren venter et sekund og svarer.
+    \begin{itemize}
+        \item Hint: det er forskjell mellom å si noe og å sende en melding. Dere trenger to blokker for å gjøre begge deler.
+    \end{itemize}
+\end{itemize}
+
+\newpage
+
+Lyd er knyttet til en figur. Ikke alle figurer følger med lyd, så vi kan legge til egne lyder. 
+For å legge til lyd til figuren som er markert, bytt til \block{sounds} og klikk «import».
+Velg så lyden dere har lyst til å bruke. Lyden spilles av ved bruk av \block{play_sound}. 
+Denne blokken ligger under \block{sound}.
+
+De fleste figurer kan også endre utseende. For å se hvilke utseender figurene deres har, 
+se under \block{costumes}. Å bytte mellom utseender gjøres med \block{switch_costume}.
+
+Endring av den hvite bakgrunnen gjøres på samme måte. Blokkene har andre navn, 
+men bakgrunnen fungerer på samme måte som en figur. Den har sitt eget kodeområde og kan endre utseende. 
+Bakgrunnen har ikke blokker som får den til å flytte på seg.
+
+Oppgaver
+En av figurene bytter til et annet utseende når en annen figur lager lyd.
+Bytt fargen til bakgrunnen hver gang man trykker mellomrom.
+
+\begin{itemize}
+    \item En av figurene bytter til et annet utseende når en annen figur lager lyd.
+    \item Bytt fargen til bakgrunnen hver gang man trykker mellomrom.
+\end{itemize}
+
+\end{large}
+\end{document}
